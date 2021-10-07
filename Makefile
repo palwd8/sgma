@@ -1,7 +1,7 @@
 # -*- MakeFile -*-
 
 install: sgma.c schedule.txt
-	gcc -o sgma `pkg-config --cflags --libs libnotify` sgma.c
+	gcc -o sgma sgma.c
 	cp -f sgma /usr/local/bin/
 	chmod 755 /usr/local/bin/sgma
 	mkdir -p /usr/share/sgma

@@ -3,7 +3,6 @@
 #include <string.h>
 #include <time.h>
 #include <unistd.h>
-#include <libnotify/notify.h>
 
 typedef struct {
     int hour;
@@ -18,11 +17,9 @@ const int FIRST_CLASS = 9;
 
 void notify(char *class_name)
 {
-    notify_init ("Joining Class");
-	NotifyNotification * Hello = notify_notification_new (class_name, "Starting in a few mins", "dialog-information");
-	notify_notification_show (Hello, NULL);
-	g_object_unref(G_OBJECT(Hello));
-	notify_uninit();
+	if (fork() == 0) {
+		execlp("notify-send", "notify-send", "-a", "SGMA", class_name, "Starting in a few mins", NULL);
+	}
 }
 
 void get_schedule(FILE *file, Class schedule[NUM_CLASSES], int current_day)
