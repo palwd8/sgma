@@ -31,7 +31,7 @@ void get_schedule(FILE *file, Class schedule[NUM_CLASSES], int current_day)
     int hour;
     char dayfound = 0;
     while(fgets(line, sizeof(line), file)) {
-        if (line[0] == '/') continue;
+        if (line[0] == '#') continue;
         if ((line[0] == '[' && atoi(&line[1]) == current_day)) {
             dayfound = 1;
             continue;

@@ -1,10 +1,10 @@
-// This is a tab seperated file, with each day's classes under it's decimal
-// representation enclosed by square brackets, like so:
-//[n] where n is the day of the week, starting from 0.
-// Week starts from Sunday.
-// TIME	CLASS	LINK
-// Each field should be seperated by tabs
-// eg:
+# This is a tab seperated file, with each day's classes under it's decimal
+# representation enclosed by square brackets, like so:
+# [n] where n is the day of the week, starting from 0.
+# Week starts from Sunday.
+# TIME	CLASS	LINK
+# Each field should be seperated by tabs
+# eg:
 [0]
 10:00	Mathematics	https://linktomathematicsclass.com
 
